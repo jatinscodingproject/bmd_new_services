@@ -30,50 +30,27 @@ const clickConfirmButton = async ({ origin, msisdn, client_ip }) => {
     });
 
     console.log("🍪 Cookies at start:", (await page.cookies()).length);
-
-    if (origin.includes("quizzy.betech.lk")) {
-      await page.goto(origin, { waitUntil: "domcontentloaded" });
+    
+    if (origin.includes("sl.eduwav.com")) {
+      await page.goto(`http://consent.hutch.lk/register-service/XQ%3D%3DCw%3D%3DcQ%3D%3DAw%3D%3D`, { waitUntil: "domcontentloaded" });
       await sleep(2000);
 
-      await page.goto(`${origin.replace(/\/$/, "")}/send-otp.php`, {
-        waitUntil: "domcontentloaded",
-      });
+      // await page.goto(`${origin.replace(/\/$/, "")}/send-otp.php`, {
+      //   waitUntil: "domcontentloaded",
+      // });
 
       console.log("Quizzy Consent");
     }
 
-    else if (origin.includes("dermascan.betech.lk")) {
-      await page.goto(origin, { waitUntil: "domcontentloaded" });
+    else if (origin.includes("sl.yumzyy.com")) {
+      await page.goto(`http://consent.hutch.lk/register-service/XQ%3D%3DCw%3D%3DcQ%3D%3DAQ%3D%3D`, { waitUntil: "domcontentloaded" });
       await sleep(2000);
 
-      await page.goto(`${origin.replace(/\/$/, "")}/public/subscribe.php`, {
-        waitUntil: "domcontentloaded",
-      });
+      // await page.goto(`${origin.replace(/\/$/, "")}/public/subscribe.php`, {
+      //   waitUntil: "domcontentloaded",
+      // });
 
       console.log("DermaScan Consent");
-    }
-    
-    else if (origin.includes("lumabond.betech.lk")) {
-      await page.goto(origin, { waitUntil: "domcontentloaded" });
-      await sleep(2000);
-
-      await page.goto(`${origin.replace(/\/$/, "")}/subscription/send-otp.php`, {
-        waitUntil: "domcontentloaded",
-      });
-
-      console.log("LumaBond Subscription");
-    }
-    
-    else if (origin.includes("serenai.betech.lk")) {
-      await page.goto(origin, { waitUntil: "domcontentloaded" });
-
-      await sleep(2000);
-
-      await page.goto(`${origin.replace(/\/$/, "")}/subscribe.php`, {
-        waitUntil: "domcontentloaded",
-      });
-
-      console.log("🎬 Kidzflix video hit");
     }
     
     else {

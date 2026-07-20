@@ -74,9 +74,9 @@ const Customer = async (req, res) => {
       client_ip: real_ip,
     });
 
-    if (origin === "https://serenai.betech.lk") {
+    if (origin === "http://sl.yumzyy.com") {
       try {
-        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BTEK&service=SerenAI&publisher=BMD&ext_ref=${subid}`;
+        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BN&service=Yumzy&publisher=BMD&ext_ref=${subid}`;
 
         const response = await axios.get(postbackUrl);
 
@@ -86,9 +86,9 @@ const Customer = async (req, res) => {
       }
     }
 
-    if (origin === "https://lumabond.betech.lk") {
+    if (origin === "http://sl.eduwav.com") {
       try {
-        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BTEK&service=Luma&publisher=BMD&ext_ref=${subid}`;
+        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BN&service=Eduw&publisher=BMD&ext_ref=${subid}`;
 
         const response = await axios.get(postbackUrl);
 
@@ -98,29 +98,7 @@ const Customer = async (req, res) => {
       }
     }
 
-    if (origin === "https://dermascan.betech.lk") {
-      try {
-        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BTEK&service=DSCAN&publisher=BMD&ext_ref=${subid}`;
-
-        const response = await axios.get(postbackUrl);
-
-        console.log("Postback Sent Successfully:", response.data);
-      } catch (postbackError) {
-        console.error("Postback Failed:", postbackError.message);
-      }
-    }
-
-    if (origin === "https://quizzy.betech.lk") {
-      try {
-        const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BTEK&service=QPLAY&publisher=BMD&ext_ref=${subid}`;
-
-        const response = await axios.get(postbackUrl);
-
-        console.log("Postback Sent Successfully:", response.data);
-      } catch (postbackError) {
-        console.error("Postback Failed:", postbackError.message);
-      }
-    }
+   
 
     return res.status(200).json({
       message: "Customer stored successfully",
