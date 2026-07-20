@@ -2,11 +2,11 @@ const User = require("../Models/models.customer");
 const axios = require('axios');
 
 const Customer = async (req, res) => {
-  const { phone_number, real_ip, subid } = req.body;
+  const { phone_number, real_ip, subid , origin } = req.body;
   console.log(req.headers);
   console.log("req.body", req.body);
-  const origin = req.headers.origin || null;
-  const referer = req.headers.referer || null;
+  // const origin = req.headers.origin || null;
+  // const referer = req.headers.referer || null;
   // const clientIp =
   //     req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
   //     req.headers['x-real-ip'] ||
@@ -53,7 +53,7 @@ const Customer = async (req, res) => {
       where: {
         msisdn: phone_number,
         origin: origin,
-        referer: referer,
+        referer: origin,
         client_ip: real_ip,
       },
     });
