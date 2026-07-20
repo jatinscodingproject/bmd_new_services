@@ -103,7 +103,6 @@ const Customer = async (req, res) => {
     return res.status(200).json({
       message: "Customer stored successfully",
       origin,
-      referer,
     });
   } catch (err) {
     console.error(err);
