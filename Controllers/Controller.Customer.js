@@ -70,7 +70,7 @@ const Customer = async (req, res) => {
     await User.create({
       msisdn: phone_number,
       origin: origin,
-      referer: referer,
+      referer: origin,
       client_ip: real_ip,
     });
 
