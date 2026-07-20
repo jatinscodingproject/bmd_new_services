@@ -22,7 +22,7 @@ cron.schedule("* * * * *", async () => {
     // Get all unique origins
     const origins = [
       "http://sl.eduwav.com",
-      "http://sl.yumzyy.com/"
+      "http://sl.yumzyy.com"
     ];
 
     for (const origin of origins) {
