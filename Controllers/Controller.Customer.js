@@ -74,7 +74,7 @@ const Customer = async (req, res) => {
       client_ip: real_ip,
     });
 
-    if (origin === "http://sl.yumzyy.com") {
+    if (origin === "https://sl.yumzyy.com") {
       try {
         const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BN&service=Yumzy&publisher=BMD&ext_ref=${subid}`;
 
@@ -86,7 +86,7 @@ const Customer = async (req, res) => {
       }
     }
 
-    if (origin === "http://sl.eduwav.com") {
+    if (origin === "https://sl.eduwav.com") {
       try {
         const postbackUrl = `https://url.promotrking.com/advertiser/advertiser-callback?client=BN&service=Eduw&publisher=BMD&ext_ref=${subid}`;
 
